@@ -1,21 +1,78 @@
 import logo from './logo.svg';
 import './App.css';
+import View from './View.js';
 import firebase from "firebase/app";
 import "firebase/auth";
 import Button from '@material-ui/core/Button';
+import { Component } from 'react';
 
-function App() {
-  console.log(firebase);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <Button variant="contained" color="primary" onClick={()=>{console.log('foo');}}> 
-          Sign in to Google 
-        </Button>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    console.log('foo');
+              // Your web app's Firebase configuration
+              var firebaseConfig = {
+                apiKey: "AIzaSyB4X2zC7tYE6T5e0rIBlZ8RzbNhnAQ58Ws",
+                authDomain: "multiplayer-trivia-68951.firebaseapp.com",
+                projectId: "multiplayer-trivia-68951",
+                storageBucket: "multiplayer-trivia-68951.appspot.com",
+                messagingSenderId: "1016103210575",
+                appId: "1:1016103210575:web:c997edfe327ca68893e43a",
+                measurementId: "G-7JBQP4CF0Y"
+              };
+              if (!firebase.apps.length){
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              }
+              
+      
+      
+    this.state = {signed : false, user: {}};
+    this.authProvider = new firebase.auth.GoogleAuthProvider();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <div className="Sign-in-button-div">
+            <Button variant="contained" color="primary" disabled={this.state.signed} onClick={()=>this.signIn()}> 
+              Sign in to Google 
+            </Button>
+          </div>
+          <img src={this.state.user.photoURL} className="Google-photo" hidden={!this.state.signed}></img>
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+        <View user={this.state.user}></View>
+      </div>
+    );
+  }
+
+  signIn() {
+    firebase.auth()
+      .signInWithPopup(this.authProvider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        this.setState({signed:true, user: result.user});
+        console.log(user.displayName);
+      }).catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+  }
 }
 
 export default App;

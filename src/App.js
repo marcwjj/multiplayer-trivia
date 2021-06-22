@@ -43,7 +43,9 @@ class App extends Component {
           <img src={this.state.user.photoURL} className="Google-photo" hidden={!this.state.signed}></img>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <View user={this.state.user}></View>
+        <div hidden={!this.state.signed}>
+          <View hidden={!this.state.signed} user={this.state.user}></View>
+        </div>
       </div>
     );
   }

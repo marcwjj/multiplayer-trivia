@@ -27,12 +27,20 @@
   color: white;
 }
 
+  .App-header h1 {
+    margin: 0 20px;
+    font-family: monospace;
+  }
+
 .App-link {
   color: #61dafb;
 }
 
 .Sign-in-button-div {
-  margin-left: 20px;
+  margin: 200px;
+}
+.Sign-in-button-div button {
+  font-size: 30px;
 }
 
 .Google-photo {

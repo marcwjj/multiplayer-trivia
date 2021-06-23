@@ -7,8 +7,8 @@ import Button from '@material-ui/core/Button';
 import { Component } from 'react';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     console.log('foo');
               // Your web app's Firebase configuration
               var firebaseConfig = {
@@ -27,7 +27,7 @@ class App extends Component {
               
       
       
-    this.state = {signed : false, user: {}};
+    this.state = {signed : false, user: {}, isHost: false};
     this.authProvider = new firebase.auth.GoogleAuthProvider();
   }
 
@@ -35,16 +35,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="Sign-in-button-div">
-            <Button variant="contained" color="primary" disabled={this.state.signed} onClick={()=>this.signIn()}> 
-              Sign in to Google 
-            </Button>
-          </div>
+          <h1> ML Insights Trivia </h1>
           <img src={this.state.user.photoURL} className="Google-photo" hidden={!this.state.signed}></img>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div hidden={!this.state.signed}>
-          <View hidden={!this.state.signed} user={this.state.user}></View>
+          <View hidden={!this.state.signed} user={this.state.user} isHost={this.state.isHost}></View>
+        </div>
+        <div className="Sign-in-button-div">
+          <Button variant="contained" color="primary" disabled={this.state.signed} onClick={()=>this.signIn()}> 
+            Sign in to Google 
+          </Button>
         </div>
       </div>
     );
@@ -62,7 +63,8 @@ class App extends Component {
         // The signed-in user info.
         var user = result.user;
         // ...
-        this.setState({signed:true, user: result.user});
+        this.setState({signed:true, user: result.user, isHost: result.user.uid == "93ev6xk0QzPQJG7daXFOD7YlzZi1" || 
+        result.user.uid == "CSGH2cs8wWY0dfIzO961RziMdgM2"});
         console.log(user.displayName);
       }).catch((error) => {
         // Handle Errors here.

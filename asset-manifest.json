@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/multiplayer-trivia/static/css/main.1faa3b0d.chunk.css",
-    "main.js": "/multiplayer-trivia/static/js/main.bf365a8a.chunk.js",
-    "main.js.map": "/multiplayer-trivia/static/js/main.bf365a8a.chunk.js.map",
-    "runtime-main.js": "/multiplayer-trivia/static/js/runtime-main.3831508a.js",
-    "runtime-main.js.map": "/multiplayer-trivia/static/js/runtime-main.3831508a.js.map",
-    "static/js/2.fb4b7449.chunk.js": "/multiplayer-trivia/static/js/2.fb4b7449.chunk.js",
-    "static/js/2.fb4b7449.chunk.js.map": "/multiplayer-trivia/static/js/2.fb4b7449.chunk.js.map",
-    "static/js/3.6725ce1c.chunk.js": "/multiplayer-trivia/static/js/3.6725ce1c.chunk.js",
-    "static/js/3.6725ce1c.chunk.js.map": "/multiplayer-trivia/static/js/3.6725ce1c.chunk.js.map",
+    "main.css": "/multiplayer-trivia/static/css/main.ae4bde2a.chunk.css",
+    "main.js": "/multiplayer-trivia/static/js/main.a157bb08.chunk.js",
+    "main.js.map": "/multiplayer-trivia/static/js/main.a157bb08.chunk.js.map",
+    "runtime-main.js": "/multiplayer-trivia/static/js/runtime-main.9c32649d.js",
+    "runtime-main.js.map": "/multiplayer-trivia/static/js/runtime-main.9c32649d.js.map",
+    "static/js/2.e4534fab.chunk.js": "/multiplayer-trivia/static/js/2.e4534fab.chunk.js",
+    "static/js/2.e4534fab.chunk.js.map": "/multiplayer-trivia/static/js/2.e4534fab.chunk.js.map",
+    "static/js/3.fc66b351.chunk.js": "/multiplayer-trivia/static/js/3.fc66b351.chunk.js",
+    "static/js/3.fc66b351.chunk.js.map": "/multiplayer-trivia/static/js/3.fc66b351.chunk.js.map",
     "index.html": "/multiplayer-trivia/index.html",
-    "static/css/main.1faa3b0d.chunk.css.map": "/multiplayer-trivia/static/css/main.1faa3b0d.chunk.css.map",
-    "static/js/2.fb4b7449.chunk.js.LICENSE.txt": "/multiplayer-trivia/static/js/2.fb4b7449.chunk.js.LICENSE.txt",
+    "static/css/main.ae4bde2a.chunk.css.map": "/multiplayer-trivia/static/css/main.ae4bde2a.chunk.css.map",
+    "static/js/2.e4534fab.chunk.js.LICENSE.txt": "/multiplayer-trivia/static/js/2.e4534fab.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/multiplayer-trivia/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3831508a.js",
-    "static/js/2.fb4b7449.chunk.js",
-    "static/css/main.1faa3b0d.chunk.css",
-    "static/js/main.bf365a8a.chunk.js"
+    "static/js/runtime-main.9c32649d.js",
+    "static/js/2.e4534fab.chunk.js",
+    "static/css/main.ae4bde2a.chunk.css",
+    "static/js/main.a157bb08.chunk.js"
   ]
 }

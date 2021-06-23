@@ -62,7 +62,7 @@ class App extends Component {
         var token = credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        // ...
+        // Only Emma and Jiajing can be host :) 
         this.setState({signed:true, user: result.user, isHost: result.user.uid == "93ev6xk0QzPQJG7daXFOD7YlzZi1" || 
         result.user.uid == "CSGH2cs8wWY0dfIzO961RziMdgM2"});
         console.log(user.displayName);

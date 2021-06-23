@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/multiplayer-trivia/static/css/main.b8e5c7df.chunk.css",
-    "main.js": "/multiplayer-trivia/static/js/main.1aa7eee8.chunk.js",
-    "main.js.map": "/multiplayer-trivia/static/js/main.1aa7eee8.chunk.js.map",
+    "main.css": "/multiplayer-trivia/static/css/main.44c98eb8.chunk.css",
+    "main.js": "/multiplayer-trivia/static/js/main.1e1d30fd.chunk.js",
+    "main.js.map": "/multiplayer-trivia/static/js/main.1e1d30fd.chunk.js.map",
     "runtime-main.js": "/multiplayer-trivia/static/js/runtime-main.928a8c5d.js",
     "runtime-main.js.map": "/multiplayer-trivia/static/js/runtime-main.928a8c5d.js.map",
     "static/js/2.303ef0ad.chunk.js": "/multiplayer-trivia/static/js/2.303ef0ad.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.ae509ad4.chunk.js": "/multiplayer-trivia/static/js/3.ae509ad4.chunk.js",
     "static/js/3.ae509ad4.chunk.js.map": "/multiplayer-trivia/static/js/3.ae509ad4.chunk.js.map",
     "index.html": "/multiplayer-trivia/index.html",
-    "static/css/main.b8e5c7df.chunk.css.map": "/multiplayer-trivia/static/css/main.b8e5c7df.chunk.css.map",
+    "static/css/main.44c98eb8.chunk.css.map": "/multiplayer-trivia/static/css/main.44c98eb8.chunk.css.map",
     "static/js/2.303ef0ad.chunk.js.LICENSE.txt": "/multiplayer-trivia/static/js/2.303ef0ad.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/multiplayer-trivia/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.928a8c5d.js",
     "static/js/2.303ef0ad.chunk.js",
-    "static/css/main.b8e5c7df.chunk.css",
-    "static/js/main.1aa7eee8.chunk.js"
+    "static/css/main.44c98eb8.chunk.css",
+    "static/js/main.1e1d30fd.chunk.js"
   ]
 }

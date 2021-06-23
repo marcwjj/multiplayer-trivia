@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import Button from '@material-ui/core/Button';
 import { Component } from 'react';
+import { FormControlLabel, Switch } from '@material-ui/core';
 
 class App extends Component {
   constructor(props) {
@@ -32,11 +33,19 @@ class App extends Component {
   }
 
   render() {
+    const handleChange = (event) => {
+      this.setState({isHost: event.target.checked});
+    };
+
     return (
       <div className="App">
         <header className="App-header">
           <h1> ML Insights Trivia </h1>
           <img src={this.state.user.photoURL} className="Google-photo" hidden={!this.state.signed}></img>
+          <FormControlLabel
+            control={<Switch checked={this.state.isHost} onChange={handleChange} name="checkedA" />}
+            label="Act as Host"
+          />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div hidden={!this.state.signed}>
@@ -50,6 +59,7 @@ class App extends Component {
       </div>
     );
   }
+  
 
   signIn() {
     firebase.auth()
@@ -63,8 +73,7 @@ class App extends Component {
         // The signed-in user info.
         var user = result.user;
         // Only Emma and Jiajing can be host :) 
-        this.setState({signed:true, user: result.user, isHost: result.user.uid == "93ev6xk0QzPQJG7daXFOD7YlzZi1" || 
-        result.user.uid == "CSGH2cs8wWY0dfIzO961RziMdgM2"});
+        this.setState({signed:true, user: result.user});
         console.log(user.displayName);
       }).catch((error) => {
         // Handle Errors here.

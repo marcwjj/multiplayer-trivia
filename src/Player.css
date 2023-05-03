@@ -1,0 +1,54 @@
+.player-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.player-name {
+    flex: 1;
+    float: left;
+    border-right: 1px solid #888;
+    min-width: 250px;
+}
+
+.counter {
+    height: 100%;
+}
+
+.message-chips {
+    flex: 10;
+    padding: 12px;
+    float: left;
+}
+
+.player-photo {
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 10px -10px 0;
+}
+
+.leader-icon {
+    position: absolute;
+    font-size: 40px;
+    margin: -10px 0 0 -20px;
+    transform: rotate(-20deg);
+}
+
+.chip-0 {
+    font-size: larger !important;
+}
+
+.chip-0,
+.chip-1,
+.chip-2 {
+    margin: 0 10px;
+}
+
+.chip-1,
+.chip-2 {
+    opacity: .5;
+}
+
+.chat-icon {
+    margin: -5px 10px;
+}
+

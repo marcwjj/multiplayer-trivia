@@ -1,0 +1,83 @@
+.View {
+  display: flex;
+  flex-direction: row;
+}
+
+.Messaging {
+  flex: 1;
+  margin: 20px;
+}
+
+.History {
+  flex: 2;
+}
+
+.first-row button,
+.second-row button {
+  font-size: 20px;
+  padding: 0 20px;
+  margin: 5px;
+}
+
+.first-row,
+.second-row {
+  margin-left: -30px;
+}
+
+.messaging-paper {
+  height: 100%;
+  margin: 10px;
+}
+
+.custom-text-form button {
+  font-size: 20px !important;
+  top: -6px;
+}
+
+.custom-text-form input[type=text] {
+  flex-grow: 1;
+  /* border-width: 0 0 1px 0; */
+  font-size: 20px !important;
+  margin: 15px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  /* background-color: #222; */
+  /* border-style: none; */
+  /* text-shadow: none; */
+  /* color: #ddd; */
+  letter-spacing: 2px;
+  /* outline: none; */
+}
+
+.custom-text-form input[type=text]::-webkit-input-placeholder {
+  color: #666;
+  letter-spacing: 2px;
+}
+
+.custom-text-form input[type=submit] {
+  display: block;
+  font-size: .6em;
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  border: none;
+  /* color: #999; */
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.custom-text-form input[type=submit]:hover {
+  background: #4b71b5;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 940px) {
+  /* For mobile phones: */
+  .View {
+    flex-direction: column;
+  }
+}
